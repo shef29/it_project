@@ -79,9 +79,6 @@ class Image
     public function checkImage()
     {
         if ($this->_issetFile() && $this->getDataImage() && $this->getTypeImage() && $this->getCheckSizeImage()) {
-            $functionCreateImage = 'imagecreatefrom' . $this->type_image;
-            $this->new_image = $functionCreateImage($this->file);
-            $this->new_name_img = $this->NewNameImg(time());
             return true;
         } else return false;
     }
